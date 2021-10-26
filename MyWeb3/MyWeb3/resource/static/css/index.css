@@ -1,0 +1,154 @@
+html,body{
+    font-family:"Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+}
+
+::-webkit-scrollbar{
+    background-color:transparent;
+    display:none;
+}
+
+.container .nav-left{
+    width:3vw;
+    height:100vh;
+    /* background-color:#e09fc5; */
+    background-color:rgb(243,230,194);
+    float:left;
+    position:fixed;
+}
+
+.container .topbar{
+    width:97vw;
+    height:10vh;
+    /* background-color:#192752; */
+    background-color:rgb(188,222,231);
+    margin:0px auto auto 3vw;
+
+    /* 通过定位将topnav不随着滚动条变化 */
+    position:absolute;
+    top:0px;
+}
+
+.container .nav-left ul{
+    margin-top:20px;    
+}
+
+.container .nav-left ul li{
+    margin-left:10px;
+    margin-bottom:40px;
+}
+
+.container .nav-left li a i{
+    font-size:22px; 
+    color:rgb(2,162,215);
+}
+
+.container .nav-left li a i:hover{
+    color:mediumpurple;
+}
+
+.container .topbar .topbarnav ul li{
+    float:left;
+    margin:4vh auto auto 12vw;   
+}
+
+.container .topbar .topbarnav ul .topbarsearch{
+    clear:left;
+    display:inline-block;
+    margin-left:10vw;
+    margin-top:2.5vh;
+}
+
+.container .topbar .topbarnav ul li a{
+    color:rgb(2,162,215);
+    font-size:18px;
+}
+
+.container .topbar .topbarnav ul li a:hover{
+    color:mediumpurple;
+    transform:scale(2.2);
+}
+
+.container .topbar .topbarnav ul .topbarheadimage{
+    width:60px;
+    height: 60px;
+    margin-left:50px;
+    margin-top:5px;
+    border-radius:50%;
+    transition:all 0.6s;
+}
+
+.container .topbar .topbarnav ul .topbarheadimage:hover{
+    transform:scale(1.1);
+}
+
+.container .main .mainleft{
+    /* display:inline-block; */
+    width:600px;
+    height:700px;
+    background-color:rgba(223,223,223,.5);
+    margin-left:10vw;
+    margin-top:15vh;
+    border-radius:10px;
+    float:left;
+}
+
+.container .main .mainleft h1{
+    font-size:50px;
+    margin-left:80px;
+    margin-bottom:30px;
+    padding-top:30px;
+}
+
+.container .main .mainleft p{
+    font-size:20px;
+    line-height:50px;
+    margin-left:80px;
+}
+
+.container .main .mainleft .wechatphoto{
+    display:inline-block;
+    width:460px;
+    height:200px;
+    margin:10px 70px;
+}
+
+.container .main .mainright{
+    width:600px;
+    height:700px;
+    float:right;
+    margin-left:10vw;
+    margin-top:15vh;
+}
+
+.container .main .mainright .biglogo{
+    transition:all 0.6s;
+}
+
+.container .main .mainright .biglogo:hover{
+    transform:scale(1.2);
+}
+
+.container .main .mainleft .OneButton{
+    transition:all 0.6s;
+    width:200px;
+    height:60px;
+    border:2px rgb(2,162,215) solid;
+    background-color:white;
+    margin:50px auto;
+    border-radius:40px;
+}
+
+.container .main .mainleft .OneButton a{
+    transition:all 0.6s;
+    color:rgb(2,162,215);
+    font-size:20px;
+    padding:300px 50px;
+}
+
+.container .main .mainleft .OneButton:hover{
+    background-color:rgb(2,162,215);
+}
+
+.container .main .mainleft .OneButton a:hover{
+    color:white;
+}
