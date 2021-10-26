@@ -1,0 +1,79 @@
+::-webkit-scrollbar{
+    background-color:transparent;
+    display:none;
+}
+
+.container .header{
+    width:100vw;
+    height:40vh;
+    background-color:#008776;
+    font-family:"Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+}
+
+.container .topLinkList ul li{
+    float:left;
+    margin:20px;
+}
+
+.container .topLinkList ul li a{
+    color:#eee;
+    font-size:20px;
+}
+
+.container .topLinkList ul li a:hover{
+    color:yellow;
+}
+
+.container .topLinkList{
+    margin-left:1000px;
+}
+
+.container .topLinkList ul li i{
+    color:#eee;
+    font-size:25px;
+    margin-left:100px;
+}
+
+.container .topLinkList ul li i:hover{
+    color:yellow;
+}
+
+.container .header .info .headImage{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    margin:10px auto;
+    margin-left:50vw;
+}
+
+.container .header .info .introduce1 , .introduce2{
+    color:#eee;
+    font-size:20px;
+    margin:15px auto;
+    margin-left:43vw;
+}
+
+.container .main .technology hr{
+    margin:30px 100px;
+    border:2px #008897 dashed;
+}
+
+.container .main .technology .technologyTitle{
+    color:#008776;
+    margin:20px 0px 10px 100px;
+}
+
+.container .main .technology .technologyText{
+    margin:20px auto;
+    width:80vw;
+    height:80vh;
+    background-color:rgba(217,217,217,.5);
+    border-radius:30px;
+}
+
+.container .main .technology .technologyImage{
+    width:70vw;
+    height:70vh;
+    margin:5vh 5vw;
+    border-radius:30px;
+}
