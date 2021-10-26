@@ -1,0 +1,80 @@
+::-webkit-scrollbar{
+    background-color:transparent;
+    display:none;
+}
+
+.container{
+    /* 最大容器为网页可视化尺寸 */
+    width: 100vw;
+    height: 100vw;
+
+    /* 给container设置背景图片 */
+    background:url("F:\\Code\\WriteCodes\\vscode\\vscodeForHTML\\MyProject\\MyWeb1\\static\\image\\background.jpg") fixed no-repeat;
+    background-size:cover;
+}
+
+.nav{
+    /* 宽度自适配 */
+    width:auto;
+    
+    /* 高度占用可视化尺寸的10% */
+    height:10vh;
+
+    background-color:rgb(91,99,156);
+
+    /* 通过定位将顶部nav设置为静止 */
+    position:sticky;
+    top:0px;
+}
+
+/* 导航栏中所有li(所有模块) */
+.nav li{
+
+    /* 将列表中所有选项设置为左浮动(右浮动也可以,其实就是修改各个li的外边距) */
+    float:left;
+
+    /* 将行高和容器height设置成相同数值,这样子元素就会居中 */
+    line-height:10vh;
+}
+
+/* 导航栏中所有超链接 */
+.nav li a{
+    
+    /* 将所有超链接设置成白色 */
+    color:#dfdfdf;  
+
+    /* 尺寸为18px */
+    font-size:18px;
+
+    /* 水平内边距为49px,使a将li撑开 */
+    padding:0 49px;
+}
+
+/* 标题 */
+.nav li .title{
+    /* 将title设置成大一点的字体,html中还使用了strong标签加粗 */
+    font-size:25px;
+}
+
+/* 头像 */
+.nav li .head{
+    width:50px;
+    height: 50px;
+
+    margin-left:100px;
+    margin-top:10px;
+
+    /* 将图片变圆 */
+    border-radius:50%;
+}
+
+/* swagger中的搜索框就是一个div,但是它本身的class已经定义好了,也不好再去动,所以就再套一个div用来调整整个search的外边距了 */
+.nav li .searchinput{
+    margin:0 50px;
+}
+
+/* 鼠标移动效果,除了标题、搜索框和头像之外,其他全部设置成鼠标移动到上面background显示lightblue */
+.nav li:hover:not(:nth-child(1)):not(:nth-child(7)):not(:nth-child(8)){
+    background-color:lightblue;
+}
+
