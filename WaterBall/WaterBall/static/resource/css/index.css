@@ -1,0 +1,86 @@
+/* 清楚默认样式 */
+*{
+    margin:0px;
+    padding:0px;
+}
+
+body{
+    height:100vh;
+    width:100vw;
+    background:linear-gradient(rgb(95,95,250) 10%,rgb(3,3,110));
+}
+
+/* 设置球和水的公共部分 */
+.main,.main .wave{
+    /* 宽高一样 */
+    width:200px;
+    height:200px;
+
+    /* 都是圆 */
+    border-radius:50%;
+
+    /* 定位 */
+    /* 先将元素相对弄到页面中心 */
+    position:absolute;
+    left:50%;
+    top:50%;
+    
+    /* 调整元素长度对定位的影响 */
+    transform:translate(-50%,-50%);
+}
+
+/* 最外层的球用于装水,并且和水有间隔,所以没有背景颜色,只有边框和内边距 */
+.main{
+    border:3px solid darkturquoise;
+    padding:10px;
+}
+
+.main .wave{
+    background-color:darkturquoise;
+
+    /* 将wave/水球上旋转的40%的方块超出wave的部分hidden掉 */
+    overflow:hidden;
+}
+
+/* 和after一样,都属于wave,只是这个没有动画而已 */
+.main .wave::before{
+    content:'加载中...';
+    color:darkturquoise;
+    position:absolute;
+    left:50%;
+    top:30%;
+    transform:translate(-50%,-40%);
+
+    /* 由于设置position需要层级,不显示可能是因为层级太低,给他个大的值就好了 */
+    z-index:99;
+}
+
+.main .wave::after{
+    content:'';
+    width:300px;
+    height:300px;
+
+    /* 目前最好比例,旋转边缘就是个水波 */
+    border-radius:40%;
+    
+    background-color:rgba(255,255,255,.8);
+
+    /* 还是居中 */
+    position:absolute;
+    left:50%;
+    top:0px;
+    transform:translate(-50%,-60%);
+
+    /* 使用animation动画使其旋转 */
+    /* 参数:动画名 执行一次所需要的时间 速度 循环播放 */
+    /* 注,这里的动画名是在keyframes中定义的 */
+    animation:wave 5s linear infinite;
+}
+
+/* animation动画,使用@keyframes给一个指定的动画名称赋予相应的动画 */
+@keyframes wave{
+    /* 0%是动画的开始,100%是动画的结束 */
+    100%{
+        transform:translate(-50%,-60%) rotate(360deg);
+    }
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="F:\Code\WriteCodes\vscode\vscodeForHTML\MyProject\WaterBall\static\resource\css\index.css">
+    <title>水球</title>
+</head>
+<body>
+    <!-- 总体思路:
+    设置一个大圆,没有背景颜色但有和水一样颜色的边框
+    再设置一个和大圆一样尺寸的中心球,背景颜色和大球边框一样,无边框
+    为了更帅一点,给大圆加一个内边距,其实是为了能让中心水和边框分离
+    球和水有了,但现在水是满的
+    这里特别巧妙,是在上面加上一个边角为40px的盒子(水的after,这样处理是为了在水的选择其中将多余的部分hidden了),然后让其旋转(我也想不通这玩应为什么40px的角度就可以这么丝滑柔顺)
+    然后使用anmation动画控制器旋转 -->
+    
+    <div class="main">
+        <div class="wave"></div>
+    </div>
+</body>
+</html>
